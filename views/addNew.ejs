@@ -1,0 +1,42 @@
+<%- include("includes/head.ejs"); %>
+
+    <body>
+        <%- include("includes/nav.ejs"); %>
+            <form action="/contacts" method="post">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <input type="text" class="form-control" name="username" placeholder="username">
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <input type="text" class="form-control" name="phone" placeholder="Phone">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control" name="avatar" placeholder="Avatar URL">
+                        </div>
+                        <div class="container text-center">
+                            <button class="btn btn-success btn-lg">Add new Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+    </body>
+
+    </html>

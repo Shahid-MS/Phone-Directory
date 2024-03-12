@@ -1,0 +1,27 @@
+.edit {
+  color: green;
+}
+
+.delete {
+  color: red;
+}
+
+.edit:hover {
+  color: darkgreen;
+}
+
+.delete:hover {
+  color: darkred;
+}
+th a {
+  color: black;
+  /* text-decoration: none; */
+  /* font-weight: bold; */
+}
+
+.italic {
+  font-style: italic;
+}
+.img {
+  border-radius: 50%;
+}

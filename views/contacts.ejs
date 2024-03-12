@@ -1,0 +1,73 @@
+<%- include("includes/head.ejs"); %>
+
+    <body>
+        <%- include("includes/nav.ejs"); %>
+            <div class="container">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#id</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(contact of contacts){ %>
+
+                            <tr>
+                                <td class="italic">
+                                    <%= contact.id%>
+                                </td>
+                                <th>
+                                    <a href="/contacts/<%= contact.id %>">
+                                        <%= contact.username%>
+                                    </a>
+
+                                </th>
+                                <td>
+                                    <%= contact.email%>
+                                </td>
+                                <td>
+                                    <%= contact.phone%>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="/contacts/update/<%= contact.id %>" class="btn">
+                                            <i class="fa-solid fa-pen-to-square edit"></i>
+                                        </a>
+
+                                        <!-- <a href="/contacts/update/<%= contact.id %>" class="btn">
+                                            <i class="fa-solid fa-pen-to-square edit"></i>
+                                        </a> -->
+
+                                        <form action="/contacts/<%= contact.id %>?_method=DELETE" method="post"
+                                            class="d-inline">
+                                            <button class="btn"><i class="fa-solid fa-trash delete"></i></button>
+                                        </form>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container text-center m-4">
+                <form action="/contacts/add/new">
+                    <button class="btn btn-success">Create new contact</button>
+                </form>
+            </div>
+
+
+            </div>
+    </body>
+
+
+
+
+
+    </html>

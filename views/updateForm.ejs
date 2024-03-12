@@ -1,0 +1,40 @@
+<%- include("includes/head.ejs"); %>
+
+    <body>
+        <%- include("includes/nav.ejs"); %>
+            <div class="container">
+                <h2 class="text-center mt-3">User : <%= contact.username %>
+                </h2>
+                <form action="/contacts/<%= contact.id%>?_method=PATCH" method="post">
+                    <div class="container mt-4">
+
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <input type="email" class="form-control" name="email" value="<%= contact.email %>"
+                                    placeholder="email" required>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <input type="text" class="form-control" name="phone" value="<%= contact.phone %>"
+                                    placeholder="Phone" required>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="text" class="form-control" name="avatar" placeholder="Avatar URL">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="password" class="form-control" name="password" placeholder="Password"
+                                    required>
+                            </div>
+                            <div class="container text-center">
+                                <button class="btn btn-success btn-lg">Update contact</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </body>
+
+    </html>
